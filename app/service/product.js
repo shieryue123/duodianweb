@@ -9,7 +9,7 @@ class ProductService extends Service {
     });
     return [list];
   }
-  async app() {
+  async category() {
     const arr = await this.app.mysql.select('category');
     return [arr];
   }
