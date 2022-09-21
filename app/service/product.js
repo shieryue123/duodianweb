@@ -9,6 +9,10 @@ class ProductService extends Service {
     });
     return [list];
   }
+  async app() {
+    const arr = await this.app.mysql.select('category');
+    return [arr];
+  }
 }
 
 module.exports = ProductService;

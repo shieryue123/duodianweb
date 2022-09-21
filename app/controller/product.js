@@ -26,6 +26,14 @@ class ProductController extends Controller {
       })
     };
   }
+  async app() {
+    const { ctx } = this;
+    const data = await ctx.service.product.app();
+    ctx.body = {
+      code:1,
+      data,
+    };
+  }
 }
 
 module.exports = ProductController;
